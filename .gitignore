@@ -43,6 +43,7 @@ lerna-debug.log*
 
 # sqlite databases
 */*.sqlite
+*.sqlite
 
 # NestJS generated 'undefined' file
 undefined
