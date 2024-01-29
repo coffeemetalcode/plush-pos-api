@@ -7,16 +7,17 @@ import { AppService } from './app.service';
 import * as CONSTANTS from './shared/constants';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-/* const DB_MYSQL_CONFIG: TypeOrmModuleOptions = {
+// TODO: export this from a .gitignore'd file
+const DB_MYSQL_CONFIG: TypeOrmModuleOptions = {
   type: 'mysql',
-  database: 'auto_valuator_instance',
+  database: 'plush_pos_api_instance',
   entities: [],
   synchronize: true,
-  host: '127.0.0.1', // <-- changed from 'localhost'
+  host: '127.0.0.1',
   port: 3306,
-  username: 'avapp',
+  username: 'plush-app',
   password: 'Test123$',
-}; */
+};
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const DB_SQLITE_CONFIG: TypeOrmModuleOptions = {
@@ -31,7 +32,7 @@ const DB_SQLITE_CONFIG: TypeOrmModuleOptions = {
     ConfigModule.forRoot({
       envFilePath: '.env.development.local',
     }),
-    TypeOrmModule.forRoot(DB_SQLITE_CONFIG),
+    TypeOrmModule.forRoot(DB_MYSQL_CONFIG),
   ],
   controllers: [AppController],
   providers: [AppService],
