@@ -46,9 +46,18 @@ $ npm run clean
 # ! The second one will delete any untracked files (i.e. new files you haven't staged with git add -A)
 ```
 
+## Development Resources
+
+### MySQL
+
+Database planning on [dbdiagram.io](https://dbdiagram.io/)
+
+- [plush-as-you-go](https://dbdiagram.io/d/plush-as-you-go-65bd5af5ac844320ae5745f3) (for generating `CREATE` statements as new stuff is added)
+- [plush-pos-app](https://dbdiagram.io/d/plush-pos-app-646c8898dca9fb07c498137c) (current aspirational / development snapshot)
+
 ## Issues
 
- - TypeORM is missing support for UUID to Binary transformations (for MySQL UUID PKs in MySQL `< v8`) - an [issue](https://github.com/typeorm/typeorm/issues/10542) is open for this.
+- TypeORM is missing support for UUID to Binary transformations (for MySQL UUID PKs in MySQL `< v8`) - an [issue](https://github.com/typeorm/typeorm/issues/10542) is open for this.
 <!--
 
 <p align="center">
