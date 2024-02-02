@@ -2,6 +2,53 @@
 
 ## Inventory, Customer, POS, and eCommerce API supporting the Plush Integrated POS/eCommerce system
 
+## Installation
+
+```bash
+$ npm install
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
+
+## Clean the Project Directory
+
+```bash
+# dry run -- reports what would be deleted
+$ npm run clean -- -n
+
+# for real -- destructive
+$ npm run clean
+
+# ! The second one will delete any untracked files (i.e. new files you haven't staged with git add -A)
+```
+
+## Issues
+
+ - TypeORM is missing support for UUID to Binary transformations (for MySQL UUID PKs in MySQL `< v8`) - an [issue](https://github.com/typeorm/typeorm/issues/10542) is open for this.
 <!--
 
 <p align="center">
