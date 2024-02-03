@@ -12,12 +12,18 @@ export class CustomersService {
     private _repo: Repository<Customer>,
   ) {}
 
-  findOne(id: number): void {
+  findOne(id: number): Promise<Customer> {
     if (!id) {
       throw new NotFoundException(`user with id ${id} doesn't exist!`);
     }
 
-    this._repo.findOneBy({ id });
+    const customer = this._repo.findOneBy({ id });
+
+    return customer;
+  }
+
+  findAll(): Promise<Customer[]> {
+    return this._repo.find();
   }
 
   create(
@@ -28,7 +34,7 @@ export class CustomersService {
     password: string,
     username: string,
   ): void {
-    const customer = this._repo.create({
+    const customer: Customer = this._repo.create({
       email,
       first_name,
       last_name,
