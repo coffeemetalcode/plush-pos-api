@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CustomersModule } from './customers/customers.module';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { MySQLConfig } from './config/mysql.configuration';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -19,6 +20,7 @@ import { SQLiteConfig } from './config/sqlite.configuration';
       // useClass: MySQLConfig,
       useClass: SQLiteConfig,
     }),
+    CustomersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

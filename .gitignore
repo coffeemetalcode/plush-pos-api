@@ -47,3 +47,6 @@ lerna-debug.log*
 
 # NestJS generated 'undefined' file
 undefined
+
+# Temporary scratch files
+*.temp
