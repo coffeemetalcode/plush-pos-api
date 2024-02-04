@@ -17,8 +17,8 @@ import { SQLiteConfig } from './config/sqlite.configuration';
       isGlobal: true,
     }),
     TypeOrmModule.forRootAsync({
-      // useClass: MySQLConfig,
-      useClass: SQLiteConfig,
+      useClass: MySQLConfig,
+      // useClass: SQLiteConfig,
     }),
     CustomersModule,
   ],

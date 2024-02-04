@@ -6,7 +6,9 @@
 
 /* USE plush_pos_api_instance;
 
-DROP TABLE customers; */
+*/
+
+DROP TABLE customers;
 
 CREATE TABLE customers (
   birth_date date,
