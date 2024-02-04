@@ -26,13 +26,16 @@ export class CustomersService {
     return this._repo.find();
   }
 
-  create(
+  // TODO make this method take a single argument of an object of type Customer
+  register(
     email: string,
     first_name: string,
     last_name: string,
     phone: string,
     password: string,
     username: string,
+    birth_date?: string,
+    display_name?: string,
   ): void {
     const customer: Customer = this._repo.create({
       email,
@@ -41,6 +44,8 @@ export class CustomersService {
       phone,
       password,
       username,
+      birth_date,
+      display_name,
     });
 
     this._repo.save(customer);

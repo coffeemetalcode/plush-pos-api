@@ -1,7 +1,9 @@
-/* 
- * to insert this with a CLI command, do
- * sqlite3 plush.pos.api.sqlite ".read src/data/sqlite.sql" .quit
- */
+-- 
+-- to insert this with a CLI command, do
+-- sqlite3 plush.pos.api.sqlite ".read src/data/sqlite.sql" .quit
+--
+
+DROP TABLE customers;
 
 CREATE TABLE IF NOT EXISTS customers (
   birth_date date,

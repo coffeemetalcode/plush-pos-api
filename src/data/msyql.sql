@@ -1,10 +1,14 @@
-/* 
- * to insert this with a CLI command, do
- * mysql -u <mysql-user> -p -e "source src/data/mysql.sql" plush_pos_api_instance
- * and enter the MySQL user password
- */
+-- 
+-- to insert this with a CLI command, do
+-- mysql -u <mysql-user> -p -e "source src/data/mysql.sql" plush_pos_api_instance
+-- and enter the MySQL user password
+--
 
-CREATE TABLE IF NOT EXISTS customers (
+/* USE plush_pos_api_instance;
+
+DROP TABLE customers; */
+
+CREATE TABLE customers (
   birth_date date,
   display_name varchar(64),
   email varchar(64) NOT NULL,
