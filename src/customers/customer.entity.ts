@@ -2,8 +2,10 @@ import {
   AfterInsert,
   AfterRemove,
   AfterUpdate,
-  Entity,
+  BeforeInsert,
   Column,
+  CreateDateColumn,
+  Entity,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -33,11 +35,16 @@ export class Customer {
   @Column({ type: 'varchar', length: 255 })
   password: string;
 
-  @Column({ type: 'time', default: () => 'now()' })
-  registration_date: string;
+  @CreateDateColumn()
+  registration_date: Date;
 
   @Column({ type: 'varchar', length: 32, unique: true })
   username: string;
+
+  @BeforeInsert()
+  private _setCreateDate(): void {
+    this.registration_date = new Date();
+  }
 
   @AfterInsert()
   logInsert() {
