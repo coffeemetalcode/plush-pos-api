@@ -1,12 +1,8 @@
--- 
--- to insert this with a CLI command, do
--- mysql -u <mysql-user> -p -e "source src/data/mysql.sql" plush_pos_api_instance
--- and enter the MySQL user password
---
-
-/* USE plush_pos_api_instance;
-
-*/
+/*
+ * to insert this with a CLI command, do
+ * mysql -u <mysql-user> -p -e "source src/data/mysql.sql" plush_pos_api_instance
+ * and enter the MySQL user password
+ */
 
 DROP TABLE customers;
 
