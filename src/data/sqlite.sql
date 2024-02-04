@@ -1,4 +1,8 @@
--- SQLite
+/* 
+ * to insert this with a CLI command, do
+ * sqlite3 plush.pos.api.sqlite ".read src/data/sqlite.sql" .quit
+ */
+
 CREATE TABLE IF NOT EXISTS customers (
   birth_date date,
   display_name varchar(64),

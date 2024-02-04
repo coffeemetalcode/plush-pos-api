@@ -1,6 +1,6 @@
 /* 
  * to insert this with a CLI command, do
- * mysql -u <mysql-user> -p -e "source src/data/create.sql" plush_pos_api_instance
+ * mysql -u <mysql-user> -p -e "source src/data/mysql.sql" plush_pos_api_instance
  * and enter the MySQL user password
  */
 
