@@ -55,6 +55,23 @@ Database planning on [dbdiagram.io](https://dbdiagram.io/)
 - [plush-as-you-go](https://dbdiagram.io/d/plush-as-you-go-65bd5af5ac844320ae5745f3) (for generating `CREATE` statements as new stuff is added)
 - [plush-pos-app](https://dbdiagram.io/d/plush-pos-app-646c8898dca9fb07c498137c) (current aspirational / development snapshot)
 
+### Clean and Restore Dev Databases
+
+These commands will return local MySQL and SQLite development databases to pristine condition. They work by overwriting existing copies with the queries documented in the `./data` directory as follows:
+1. Destroy all tables and recreate them
+1. Insert original test data (~ two entries) into each table
+
+```bash
+# mysql
+$ npm run clean:mysql # enter dev db user's password at prompt
+
+# sqlite
+$ npm run clean:sqlite
+
+# both
+$ npm run db:clean
+```
+
 ## Issues
 
 - TypeORM is missing support for UUID to Binary transformations (for MySQL UUID PKs in MySQL `< v8`) - an [issue](https://github.com/typeorm/typeorm/issues/10542) is open for this.
