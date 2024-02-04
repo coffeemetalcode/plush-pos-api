@@ -50,4 +50,15 @@ export class CustomersService {
 
     this._repo.save(customer);
   }
+
+  async update(id: number, attrs: Partial<Customer>) {
+    const customer = await this.findOne(id);
+
+    if (!customer) {
+      throw new NotFoundException(`user with id ${id} doesn't exist!`);
+    }
+
+    Object.assign(customer, attrs);
+    return this._repo.save(customer);
+  }
 }
