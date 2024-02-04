@@ -50,3 +50,7 @@ undefined
 
 # Temporary scratch files
 *.temp
+
+# Private scripts
+scripts/private
+scripts/private/*

@@ -7,7 +7,10 @@
   "license": "LGPL-3.0-or-later",
   "scripts": {
     "build": "nest build",
-    "clean": "git clean -dfx -e .env.development.local -e *.sqlite",
+    "clean": "git clean -dfx -e .env.development.local -e *.sqlite -e scripts/",
+    "clean:mysql": "./scripts/private/mysql-clean.sh",
+    "clean:sqlite": "./scripts/private/sqlite-clean.sh",
+    "db:clean": "npm run clean:sqlite && npm run clean:mysql",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
