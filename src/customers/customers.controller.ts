@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 
-import { CustomersService } from './customers.service';
 import { CreateCustomerDTO, UpdateCustomerDTO } from './customers.dto';
+import { CustomersService } from './customers.service';
 
 @Controller('customers')
 export class CustomersController {
@@ -21,16 +21,7 @@ export class CustomersController {
 
   @Post('/signup')
   async createCustomer(@Body() body: CreateCustomerDTO) {
-    const customer = await this._customersService.register(
-      body.email,
-      body.first_name,
-      body.last_name,
-      body.phone,
-      body.password,
-      body.username,
-      body.birth_date,
-      body.display_name,
-    );
+    const customer = await this._customersService.register(body);
 
     return customer;
   }
