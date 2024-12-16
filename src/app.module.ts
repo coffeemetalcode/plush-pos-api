@@ -9,6 +9,7 @@ import { CustomersModule } from './customers/customers.module';
 import { MySQLConfig } from './config/mysql.configuration';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { SQLiteConfig } from './config/sqlite.configuration';
+import { AuthModule } from './shared/auth/auth.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { SQLiteConfig } from './config/sqlite.configuration';
       useClass: SQLiteConfig,
     }),
     CustomersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
